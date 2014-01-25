@@ -21,7 +21,7 @@ Creates a chart in an element. Simply attach it to another element.
 
 # Contributing
 
-Fork and send a PR if you see fit, make sure to report any [issues][].
+Fork and send a PR if you see fit, make sure to report any issues.
 
 # LICENSE (MIT)
 
