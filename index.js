@@ -32,13 +32,13 @@ function CommissionBreakdownChart ( config ) {
   this.el.appendChild(this.canvas);
   this.el.appendChild(this.title);
   this.pieOpts = {
-    animation: true
+    animation: false
   };
   this.colors = config.colors || Colors;
   this.update(percentages);
 }
 
-// Updates the chart display with the inputt data percentages.
+// Updates the chart display with the input data percentages.
 CommissionBreakdownChart.prototype.update = function ( percentages ) {
   new Chart(this.canvas.getContext("2d")).Pie(this.appropriateCommissionData(percentages.initial, percentages.remainders), this.pieOpts);
 };
