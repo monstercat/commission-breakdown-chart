@@ -7,7 +7,7 @@ var Chart = require("chart");
 var Colors = {
   invalid: "#f6f6f6",
   initial: "#da4e3a",
-  remainder: "#4486f6"
+  remainder: "#4486f6",
   remainders: [],
   missing: "#ffb80a"
 };
