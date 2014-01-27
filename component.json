@@ -2,7 +2,7 @@
   "name": "commission-breakdown-chart",
   "repo": "monstercat/commission-breakdown-chart",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
     "component/chart":"*"
