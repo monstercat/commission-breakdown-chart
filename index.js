@@ -7,7 +7,8 @@ var Chart = require("chart");
 var Colors = {
   invalid: "#f6f6f6",
   initial: "#da4e3a",
-  remainders: "#4486f6",
+  remainder: "#4486f6"
+  remainders: [],
   missing: "#ffb80a"
 };
 
@@ -42,6 +43,13 @@ CommissionBreakdownChart.prototype.update = function ( percentages ) {
   new Chart(this.canvas.getContext("2d")).Pie(this.appropriateCommissionData(percentages.initial, percentages.remainders), this.pieOpts);
 };
 
+CommissionBreakdownChart.prototype.getRemainderColorForIndex = function ( index ) {
+  if ( this.colors.remainders.length >= index + 1 ) {
+    return this.colors.remainders[index];
+  }
+  return this.colors.remainder;
+}
+
 // Breaks down data into a format that the chart API can read.
 CommissionBreakdownChart.prototype.appropriateCommissionData = function ( initial, remainders ) {
   var initialTotal = (initial * 100).toFixed(0) * 1;
@@ -66,7 +74,7 @@ CommissionBreakdownChart.prototype.appropriateCommissionData = function ( initia
       for ( i = 0; i < count; i++ ) {
         var value = remainders[i] * remaindersTotal;
         remainder -= value;
-        arr.push({ value: value, color: this.colors.remainders });
+        arr.push({ value: value, color: this.getRemainderColorForIndex(i) });
       }
 
       // Show remaining piecies left to share.
