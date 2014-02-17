@@ -1,7 +1,6 @@
 // Imports
 
 var Chart = require("chart");
-var AutoScaleCanvas = require("autoscale-canvas");
 
 // Statics
 
@@ -37,8 +36,6 @@ function CommissionBreakdownChart ( config ) {
   };
   this.colors = config.colors || Colors;
   this.update(percentages);
-
-  AutoScaleCanvas(this.canvas);
 }
 
 // Updates the chart display with the input data percentages.

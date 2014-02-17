@@ -2,11 +2,10 @@
   "name": "commission-breakdown-chart",
   "repo": "monstercat/commission-breakdown-chart",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [],
   "dependencies": {
-    "component/chart":"*",
-    "component/autoscale-canvas":"*"
+    "component/chart":"*"
   },
   "development": {},
   "license": "MIT",
